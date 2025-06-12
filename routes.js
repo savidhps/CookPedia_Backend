@@ -28,4 +28,13 @@ routes.post('/save-recipe/:recipeId',jwtMiddleware,saveRecipeController.addsaveR
 // path to download recipe routes
 routes.post('/download-recipe/:recipeId',jwtMiddleware,downloadController.addDownloadRecipeController)
 
+//path to get all saved userRecipes
+routes.get('/saved-user-recipes',jwtMiddleware,saveRecipeController.getAllSavedRecipeController)
+
+//path to delete a saved Recipes
+routes.delete('/delete-saved-user-recipe/:id',saveRecipeController.deleteAllSavedRecipes)
+
+//path to get all downloaded savedrecipes
+routes.get('/downloaded-user-recipes',jwtMiddleware,downloadController.getAlldownloadRecipes)
+
 module.exports=routes

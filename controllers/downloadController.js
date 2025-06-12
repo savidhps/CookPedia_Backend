@@ -27,3 +27,13 @@ exports.addDownloadRecipeController=async(req,res)=>{
         res.status(500).json(error)
     }
 }
+
+exports.getAlldownloadRecipes=async(req,res)=>{
+    const userId=req.payload
+    try{
+        const allDownloadRecipes=await downloads.find({userId})
+        res.status(200).json(allDownloadRecipes)
+    }catch(error){
+        res.status(500).json(error)
+    }
+}
