@@ -15,7 +15,7 @@ require('./connection')
 //1create server
 const cookPediaServer=express()
 cookPediaServer.use(cors())
-cookPediaServer.use(express.json())
+cookPediaServer.use(express.json({limit:'10mb'}))
 cookPediaServer.use(routes)
 //1setPort
 const PORT=4000 || process.env.PORT

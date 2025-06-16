@@ -37,4 +37,8 @@ routes.delete('/delete-saved-user-recipe/:id',saveRecipeController.deleteAllSave
 //path to get all downloaded savedrecipes
 routes.get('/downloaded-user-recipes',jwtMiddleware,downloadController.getAlldownloadRecipes)
 
+// path to update Profiler
+routes.put('/profile-update',jwtMiddleware,userController.updateProfileController)
+
+
 module.exports=routes
