@@ -37,3 +37,14 @@ exports.getAlldownloadRecipes=async(req,res)=>{
         res.status(500).json(error)
     }
 }
+
+
+// get all downloads
+exports.getAllDownloadsController = async(req,res) =>{
+    try{
+        const allDownloads =  await downloads.find();
+        res.status(200).json(allDownloads);
+    }catch(error){
+        res.status(400).json(error)
+    }
+}

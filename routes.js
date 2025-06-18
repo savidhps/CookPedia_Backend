@@ -40,5 +40,17 @@ routes.get('/downloaded-user-recipes',jwtMiddleware,downloadController.getAlldow
 // path to update Profiler
 routes.put('/profile-update',jwtMiddleware,userController.updateProfileController)
 
+// -------------------Admin Routes ------------------------------------------------------------------
+routes.get('/all-users',userController.getAllUserController);
+//get all downloads
+
+routes.get('/all-downloads',downloadController.getAllDownloadsController);
+
+// path to add recipe 
+routes.post('/add-recipe',recipeController.addNewRecipeController)
+
+//path to delet a recipe
+routes.delete('/delete-recipe/:id',recipeController.deleteRecipeController)
+
 
 module.exports=routes
