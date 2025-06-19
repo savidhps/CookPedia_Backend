@@ -5,6 +5,7 @@ const recipeController=require('./controllers/recipeController')
 const jwtMiddleware = require('./middleware/jwtMiddleware')
 const saveRecipeController=require('./controllers/saveRecipeController')
 const downloadController=require("./controllers/downloadController")
+const testimonialController=require("./controllers/testimonialController")
 
 //register
 routes.post('/user-register',userController.registerController)
@@ -41,6 +42,7 @@ routes.get('/downloaded-user-recipes',jwtMiddleware,downloadController.getAlldow
 routes.put('/profile-update',jwtMiddleware,userController.updateProfileController)
 
 // -------------------Admin Routes ------------------------------------------------------------------
+
 routes.get('/all-users',userController.getAllUserController);
 //get all downloads
 
@@ -52,5 +54,7 @@ routes.post('/add-recipe',recipeController.addNewRecipeController)
 //path to delet a recipe
 routes.delete('/delete-recipe/:id',recipeController.deleteRecipeController)
 
+// path to add testominial
+routes.post('/add-testimonial',testimonialController.addTestimonialController)
 
 module.exports=routes

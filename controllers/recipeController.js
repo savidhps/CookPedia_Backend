@@ -51,10 +51,10 @@ exports.getAllRelatedrecipes = async (req, res) => {
 
 // admin recipe add 
 exports.addNewRecipeController = async (req, res) => {
-    const { recipeName, pretime, calories, serving, cookingTime, rating, modeofCooking, mealType, cuisineTypes, ingredients, instructions, image,
+    const { recipeName, pretime, calories, serving, cookingTime, rating, modeofCooking, mealType, cuisineTypes, ingredients, instructions, image
     } = req.body
 
-    console.log(recipeName, pretime, calories, serving, cookingTime, rating, modeofCooking, mealType, cuisineTypes, ingredients, instructions, image,
+    console.log(recipeName, pretime, calories, serving, cookingTime, rating, modeofCooking, mealType, cuisineTypes, ingredients, instructions, image
     );
 
     try {
