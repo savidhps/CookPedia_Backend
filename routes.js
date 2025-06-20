@@ -57,4 +57,15 @@ routes.delete('/delete-recipe/:id',recipeController.deleteRecipeController)
 // path to add testominial
 routes.post('/add-testimonial',testimonialController.addTestimonialController)
 
+//path to adll testominial - homepage
+
+routes.get('/all-testimonial',testimonialController.getAllTestimonialController)
+
+// path to update testominial status
+
+routes.put('/update-testominial/:id',testimonialController.updateTestominialStatusController)
+
+//pathe to get all approved testominial 
+routes.get('/all-approved-testominial',testimonialController.allApprovedTestominalsController)
+
 module.exports=routes
